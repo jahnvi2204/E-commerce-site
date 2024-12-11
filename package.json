@@ -1,0 +1,23 @@
+{
+  "name": "ecommerce-app",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon backend/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "lint": "eslint '**/*.js'",
+    "format": "prettier --write '**/*.{js,jsx,json,css,md}'"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0",
+    "nodemon": "^3.1.7",
+    "eslint": "^8.51.0",
+    "prettier": "^3.2.2",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7"
+  }
+}
