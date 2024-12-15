@@ -1,0 +1,145 @@
+/* Navbar Styles */
+
+.navbar {
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #003366; /* Dark Blue */
+    color: #fff;
+    width: 100%; /* Full width */
+    margin: 0; /* Ensure no margin */
+    padding: 0; /* No padding */
+    box-sizing: border-box; /* Include padding and borders in width calculation */
+    position: fixed; /* Keeps navbar fixed at the top */
+    top: 0; /* Position at the top */
+    left: 0; /* Position at the left edge */
+    right: 0; /* Position at the right edge */
+    z-index: 1000; /* Ensure it stays above other content */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.navbar.scrolled {
+    background-color: rgba(0, 51, 102, 0.7); /* Translucent Dark Blue */
+}
+
+.navbar-logo a {
+    color: #4A90E2; /* Medium Blue */
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar-search {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    margin: 0 0; /* No margin on left or right */
+}
+
+.navbar-search input {
+    width: 50%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    margin: 0; /* Remove margin */
+}
+
+.navbar-search button {
+    padding: 8px 15px;
+    border: none;
+    background-color: #4A90E2; /* Medium Blue */
+    color: #003366; /* Dark Blue text */
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+.navbar-search button:hover {
+    background-color: #003366; /* Dark Blue */
+    color: #A7C7E7; /* Light Blue text */
+}
+
+.navbar-links,.navbar-icons {
+    display: flex;
+    list-style: none;
+    margin-left: 0; /* Remove any margin */
+    padding: 0; /* Remove padding */
+    margin-right:15px
+}
+
+.navbar-links li {
+    margin: 0 15px;
+    position: relative;
+}
+
+.navbar-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar-links li a:hover {
+    color: #A7C7E7; /* Light Blue */
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #A7C7E7; /* Light Blue */
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    top: 100%;
+    left: 0;
+    border-radius: 5px;
+    z-index: 10;
+    width: 100px;
+}
+
+.dropdown-menu li {
+    margin: 5px 0;
+}
+
+.dropdown-menu li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+    color: #4A90E2; /* Medium Blue */
+}
+
+.navbar-icons {
+    display: flex;
+    align-items: center;
+    margin-right:30px;
+}
+
+.cart-icon,
+.user-icon {
+    color: #fff;
+    font-size: 20px;
+    margin-right:20px;
+    text-decoration: none;
+    position: relative;
+}
+
+.cart-icon:hover,
+.user-icon:hover {
+    color: #A7C7E7; /* Light Blue */
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: #A7C7E7; /* Light Blue */
+    color: #003366; /* Dark Blue text */
+    border-radius: 50%;
+    font-size: 12px;
+    padding: 2px 6px;
+}

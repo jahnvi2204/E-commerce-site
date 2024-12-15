@@ -1,0 +1,193 @@
+/* General Styles */
+*{
+    font-family:sans-sherriff;
+}
+/* body {
+   
+  } */
+  
+  /* Gradient Animation */
+  @keyframes gradientAnimation {
+    0% { background: linear-gradient(135deg, #007bff, #0056b3); }
+    50% { background: linear-gradient(135deg, #004085, #003366); }
+    100% { background: linear-gradient(135deg, #0056b3, #003366); }
+  }
+  
+  /* Navbar Styling */
+  /* .navbar {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.2rem;
+    color: #fff;
+  } */
+  
+  /* Container for Login and Register */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color:#A7C7E7;
+
+  }
+  
+  .register1, .login1 {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    width: 350px;
+    backdrop-filter: blur(10px);
+  }
+  
+  .register-header, .login-header {
+    font-size: 2.2rem;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  
+  /* Input Fields */
+ 
+  .register-input, .login-input {
+    display: flex;
+    justify-content: center; /* Center the input horizontally */
+    align-items: center; /* Center the input vertically */
+    margin-bottom: 15px;
+  }
+  
+  .register-input input,
+  .login-input input,
+  .register-input select,
+  .login-input select {
+    width: 70%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    background: #f0f0f0;
+    transition: all 0.3s ease;
+    text-align: center; /* Center text inside the input */
+  }
+  
+  .register-input input:focus,
+  .login-input input:focus,
+  .register-input select:focus,
+  .login-input select:focus {
+    border-color: #007bff;
+    background: #ffffff;
+  }
+  
+  /* User Type Dropdown */
+  .user-type {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f0f0f0;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  .user-type:focus {
+    border-color: #007bff;
+    background: #ffffff;
+  }
+  
+  /* Button Styles */
+  .register-button, .login-button {
+    text-align: center;
+  }
+  
+  .register-button button,
+  .login-button button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .register-button button:hover,
+  .login-button button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+  
+  .register-button button:active,
+  .login-button button:active {
+    transform: translateY(1px);
+  }
+  
+  /* Success and Error Messages */
+  .invalid {
+    color: #ff4d4d;
+    font-size: 1rem;
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+  }
+  
+  .success {
+    color: #28a745;
+    font-size: 1rem;
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+  }
+  
+  /* Horizontal Line */
+  hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #fff;
+    opacity: 0.3;
+  }
+  
+  /* Text for Registration Link */
+  .register-text, .login-text {
+    font-size: 1rem;
+    color: #ddd;
+    margin-right: 10px;
+  }
+  
+  .register-text a, .login-text a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .register-text a:hover, .login-text a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Checkbox Styles */
+  .remember-me {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .remember-me input {
+    margin-right: 10px;
+  }
+  
+  .remember-me label {
+    font-size: 1rem;
+    color: #ddd;
+  }
+  

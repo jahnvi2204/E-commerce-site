@@ -1,0 +1,132 @@
+/* Product Card Styles */
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .product-image {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .wishlist-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s;
+  }
+  
+  .wishlist-btn:hover {
+    background: #A7C7E7; /* Light Blue */
+  }
+  
+  .product-details {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .product-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #003366; /* Dark Blue */
+  }
+  
+  .product-description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .product-rating {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .filled-star {
+    color: #ffcc00; /* Yellow for filled stars */
+  }
+  
+  .empty-star {
+    color: #ddd; /* Light grey for empty stars */
+  }
+  
+  .product-price {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .current-price {
+    color: #ff5722; /* Dark Red for current price */
+  }
+  
+  .original-price {
+    color: #999;
+    text-decoration: line-through;
+    margin-left: 8px;
+  }
+  
+  .product-actions {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    border-top: 1px solid #eee;
+  }
+  
+  .add-to-cart-btn,
+  .buy-now-btn {
+    flex: 1;
+    margin: 0 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .add-to-cart-btn {
+    background-color: #4A90E2; /* Medium Blue */
+    color: #fff;
+  }
+  
+  .add-to-cart-btn:hover {
+    background-color: #003366; /* Dark Blue */
+  }
+  
+  .buy-now-btn {
+    background-color: #ff5722; /* Dark Red */
+    color: #fff;
+  }
+  
+  .buy-now-btn:hover {
+    background-color: #e64a19; /* Slightly lighter red */
+  }
+  

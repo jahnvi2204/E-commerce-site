@@ -9,15 +9,17 @@
     "lint": "eslint '**/*.js'",
     "format": "prettier --write '**/*.{js,jsx,json,css,md}'"
   },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "react-scripts": "^5.0.1"
+  },
   "devDependencies": {
     "concurrently": "^9.1.0",
-    "nodemon": "^3.1.7",
     "eslint": "^8.51.0",
-    "prettier": "^3.2.2",
     "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-prettier": "^5.0.0"
-  },
-  "dependencies": {
-    "dotenv": "^16.4.7"
+    "eslint-plugin-prettier": "^5.0.0",
+    "nodemon": "^3.1.7",
+    "prettier": "^3.2.2",
+    "@babel/plugin-transform-runtime": "^7.22.15"
   }
 }
