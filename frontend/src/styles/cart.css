@@ -1,0 +1,124 @@
+/* General Layout */
+/* body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+  } */
+  
+  .cartHeading{
+    text-align: center;
+    color: #333;
+  }
+  
+ .cartDiv h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .cartDiv  h2 {
+    margin-top: 20px;
+    color: #2c3e50;
+  }
+  
+  /* Product List */
+  .cartDiv  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .CartLi {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .CartLi button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cartDiv  li button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Cart Items */
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .cart-item input[type="number"] {
+    width: 50px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-left: 10px;
+  }
+  
+  .cart-item input[type="number"]:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+  }
+  
+  .cart-item button {
+    margin-left: 10px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cart-item button:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Subtotal and Clear Cart */
+  .cartDiv  h3 {
+    text-align: right;
+    margin-top: 20px;
+    color: #34495e;
+  }
+  
+  button.clear-cart {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: block;
+    margin: 20px auto 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button.clear-cart:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+  }
+  
+  /* Empty Cart Message */
+  /* p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-top: 20px;
+  } */
+  

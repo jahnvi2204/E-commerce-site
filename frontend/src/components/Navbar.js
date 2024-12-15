@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/navbar.css'; // Create a separate CSS file for styling
 import { FaShoppingCart, FaUser } from 'react-icons/fa';
+
 // JavaScript to add 'scrolled' class when scrolling
 window.addEventListener("scroll", function () {
     const navbar = document.querySelector(".navbar");
@@ -19,10 +20,10 @@ const Navbar = () => {
 
     <nav className="navbar">
       {/* Logo */}
+      
       <div className="navbar-logo">
         <Link to="/">OceanCart</Link>
       </div>
-
       {/* Links */}
       <ul className="navbar-links">
       <li className="dropdown">

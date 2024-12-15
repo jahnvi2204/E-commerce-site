@@ -4,6 +4,8 @@ import Slider from "react-slick"; // Import Slider from react-slick
 import Navbar from "../components/Navbar.js"; // Import Navbar
 import ProductGrid from "../components/ProductGrid.js"; // Import ProductGrid (which uses ProductCard)
 import Footer from "../components/Footer.js"; // Import Footer
+import coverImage from '../images/FrontPage.jpg'
+import ImageWithLinks from "../components/coverImage.js";
 
 // Importing CSS for slick carousel
 import "slick-carousel/slick/slick.css";
@@ -31,7 +33,21 @@ const Home = () => {
     ), // Custom previous arrow with styling
   };
 
-  const images = [
+  const images1 = [
+    "https://i.pinimg.com/736x/32/ee/fc/32eefc04bd87bcd6c539fa55fbd3aa6b.jpg",
+    "https://i.pinimg.com/736x/56/d9/98/56d998a1601d8dbc3cd92ba5ab1d9a7c.jpg",
+    "https://i.pinimg.com/736x/56/d9/98/56d998a1601d8dbc3cd92ba5ab1d9a7c.jpg",
+    "https://i.pinimg.com/474x/53/da/c2/53dac22d7220617742897e16a8ea1faf.jpg",
+    "https://i.pinimg.com/736x/9a/54/35/9a54359f3e62139dd47a2072435d76e7.jpg",
+    "https://i.pinimg.com/736x/56/d9/98/56d998a1601d8dbc3cd92ba5ab1d9a7c.jpg",
+    "https://i.pinimg.com/474x/53/da/c2/53dac22d7220617742897e16a8ea1faf.jpg",
+    "https://i.pinimg.com/736x/32/ee/fc/32eefc04bd87bcd6c539fa55fbd3aa6b.jpg",
+    "https://i.pinimg.com/736x/56/d9/98/56d998a1601d8dbc3cd92ba5ab1d9a7c.jpg",
+
+    
+    
+  ];
+  const images2 = [
     "https://i.pinimg.com/736x/32/ee/fc/32eefc04bd87bcd6c539fa55fbd3aa6b.jpg",
     "https://i.pinimg.com/736x/56/d9/98/56d998a1601d8dbc3cd92ba5ab1d9a7c.jpg",
     "https://i.pinimg.com/736x/56/d9/98/56d998a1601d8dbc3cd92ba5ab1d9a7c.jpg",
@@ -47,19 +63,39 @@ const Home = () => {
   ];
 
   return (
-    <div>
+    <>
+   
+    
       {/* Navbar */}
       <Navbar />
 
       {/* Main content (Product Grid) */}
       <main>
+      <div>
+       <ImageWithLinks   /> 
+</div>
         <div className="container1" style={{ minHeight: "100vh", paddingBottom: "50px" }}>
           <h1>Welcome to OceanCart!</h1>
           <h2>Shop the Latest Products</h2>
 
           {/* Slider */}
           <Slider {...settings}>
-            {images.map((image, index) => (
+            {images1.map((image, index) => (
+              <div key={index}>
+                <img
+                  src={image}
+                  alt={`Slide ${index + 1}`}
+                  style={{
+                    width: "150px",
+                    height: "150px",
+                    objectFit: "cover",
+                  }}
+                />
+              </div>
+            ))}
+          </Slider>
+          <Slider {...settings}>
+            {images2.map((image, index) => (
               <div key={index}>
                 <img
                   src={image}
@@ -81,7 +117,7 @@ const Home = () => {
 
       {/* Footer */}
       <Footer />
-    </div>
+    </>
   );
 };
 

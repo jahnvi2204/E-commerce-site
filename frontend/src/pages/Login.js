@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
-import Footer from '../components/Footer'
+import Footer from '../components/Footer';
 import '../styles/loginandRegister.css';
 
 function Login() {
-  const [mobileNumber, setMobileNumber] = useState(''); // Changed to mobileNumber
+  const [mobileNumber, setMobileNumber] = useState('');
   const [password, setPassword] = useState('');
-  const [userType, setUserType] = useState('customer'); // Default user type
+  const [userType, setUserType] = useState('customer');
   const [rememberMe, setRememberMe] = useState(false);
   const [error, setError] = useState('');
   const navigate = useNavigate();
@@ -16,30 +16,28 @@ function Login() {
   const handleLogin = async () => {
     try {
       const response = await axios.post('http://localhost:3000/login', {
-        mobileNumber, // Use mobileNumber here
+        mobileNumber,
         password,
         userType,
       });
 
       setError('');
 
-      // Save token and user details in localStorage/sessionStorage
       const { accessToken, userDetails } = response.data;
       if (rememberMe) {
         localStorage.setItem('accessToken', accessToken);
         localStorage.setItem('userType', userType);
-        localStorage.setItem('mobileNumber', userDetails.mobileNumber); // Change to mobileNumber
+        localStorage.setItem('mobileNumber', userDetails.mobileNumber);
       } else {
         sessionStorage.setItem('accessToken', accessToken);
         sessionStorage.setItem('userType', userType);
-        sessionStorage.setItem('mobileNumber', userDetails.mobileNumber); // Change to mobileNumber
+        sessionStorage.setItem('mobileNumber', userDetails.mobileNumber);
       }
 
-      // Redirect based on user type
       if (userType === 'admin') {
         navigate('/admin/dashboard');
       } else {
-        navigate(`/profile/${mobileNumber}`); // Change to mobileNumber
+        navigate(`/profile/${mobileNumber}`);
       }
     } catch (error) {
       setError(error.response?.data?.message || 'An error occurred. Please try again.');
@@ -50,70 +48,80 @@ function Login() {
     <>
       <Navbar />
       <div className="container">
-      <div className="containerInside">
-        <div className="login1">
-          <div className="login-header">Login</div>
+        <div className="containerInside">
+          <div className="login1">
+            <div className="login-header">Login</div>
+            <div class="login-container">
+            <div className="login-input">
+              <label className="login-text-label" htmlFor="mobileNumber">
+                Mobile:</label>
+            
+              <input
+                className="pass"
+                type="tel"
+                id="mobileNumber"
+                placeholder="Enter Mobile number"
+                value={mobileNumber}
+                onChange={(e) => setMobileNumber(e.target.value)}
+              />
+              </div>
+            </div>
+            <div class="login-container">
+            <div className="login-input">
+              <label className="login-text-label" htmlFor="password">
+                Password:</label>
+                
+              <input
+                className="pass"
+                type="password"
+                id="password"
+                placeholder="Enter password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </div>
+</div>
+<div class="login-container">
+            <div className="login-input">
+              <select
+                className="user-type"
+                value={userType}
+                onChange={(e) => setUserType(e.target.value)}
+              >
+                <option value="customer">Customer</option>
+                <option value="admin">Admin</option>
+                <option value="employee">Employee</option>
+              </select>
+            </div>
 
-          <div className="login-input">
-            <input
-              className="pass"
-              type="tel" // Changed input type to tel
-              placeholder="Enter Mobile number"
-              value={mobileNumber} // Use mobileNumber here
-              onChange={(e) => setMobileNumber(e.target.value)} // Set mobileNumber
-            />
+            <div className="remember-me">
+              <input
+                type="checkbox"
+                id="rememberMe"
+                checked={rememberMe}
+                onChange={(e) => setRememberMe(e.target.checked)}
+              />
+              <label htmlFor="rememberMe">Remember Me</label>
+            </div>
+</div>
+            <div className="login-button">
+              <button className="login" onClick={handleLogin}>
+                Login
+              </button>
+            </div>
+
+            {error && <span className="invalid">{error}</span>}
+
+            <hr />
+
+            <span className="login-text">Don't have an account?</span>
+            <Link to="/register">
+              <button className="login">Register</button>
+            </Link>
           </div>
-
-          <div className="login-input">
-            <input
-              className="pass"
-              type="password"
-              placeholder="Enter password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
-
-          <div className="login-input">
-            <select
-              className="user-type"
-              value={userType}
-              onChange={(e) => setUserType(e.target.value)}
-            >
-              <option value="customer">Customer</option>
-              <option value="admin">Admin</option>
-              <option value="employee">Employee</option>
-            </select>
-          </div>
-
-          <div className="remember-me">
-            <input
-              type="checkbox"
-              id="rememberMe"
-              checked={rememberMe}
-              onChange={(e) => setRememberMe(e.target.checked)}
-            />
-            <label htmlFor="rememberMe">Remember Me</label>
-          </div>
-
-          <div className="login-button">
-            <button className="login" onClick={handleLogin}>
-              Login
-            </button>
-          </div>
-
-          {error && <span className="invalid">{error}</span>}
-
-          <hr />
-
-          <span className="login-text">Don't have an account?</span>
-          <Link to="/register">
-            <button className="login">Register</button>
-          </Link>
         </div>
       </div>
-      </div>
-      <Footer/>
+      <Footer />
     </>
   );
 }
